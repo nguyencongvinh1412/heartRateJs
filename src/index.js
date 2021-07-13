@@ -17,7 +17,7 @@ const server = require('./resources/routes/server.route');
 // middleware routes
 const auth = require('./resources/middlewares/authentication');
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // databae 
 const db = require('./config/db/connect');
