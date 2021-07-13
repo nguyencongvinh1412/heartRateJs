@@ -1,0 +1,210 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Cập nhật</title>
+	
+	<!-- Load main stylesheet -->
+	<link rel="stylesheet" href="/css/capnhat.css">
+
+	<!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<form action="/admin/addUser" method="post" id="form-1">
+		<table>
+			<tr>
+				<td>
+					Email:
+				</td>
+				<td class="form-group">
+					<input type="email" required="" name="name" id="emailAdd">
+					<span class="form-message"></span>
+				</td>
+				<td>
+					Password:
+				</td>
+				<td class="form-group">
+					<input type="text" required="" name="pass" id="passAdd">
+					<span class="form-message"></span>
+				</td>
+				<td>
+					Giới tính:
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="sex" value="1" checked>
+						Nam 
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="sex" value="0">
+						Nữ
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Tuổi:
+				</td>
+				<td class="form-group">
+					<input type="text" required="" name="age" id="age">
+					<span class="form-message"></span>
+				</td>
+				<td>
+					Chiều cao:
+				</td>
+				<td class="form-group">
+					<input type="text" required="" name="height" id="height">
+					<span class="form-message"></span>
+				</td>
+				<td>
+					Cân nặng:
+				</td>
+				<td class="form-group">
+					<input type="text" required="" name="weight" id="weight">
+					<span class="form-message"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Hút thuốc:  
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="currentSmoker" value="1">
+							Có 
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="currentSmoker" value="0" checked>
+							Không
+						</label>
+					</div>
+				</td>
+				<td>
+					Số điếu/Ngày:
+				</td>
+				<td class="form-group">
+					<input type="text" required="" name="cigsPerDay" id="cigsPerDay">
+					<span class="form-message"></span>
+				</td>
+
+				<td>
+					Có dùng thuốc tăng huyết áp không?:  
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="BPMeds" value="1" checked>
+							Có 
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="BPMeds" value="0" checked>
+							Không 
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Có tiền sử bệnh đột quỵ Không?:  
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="prevalentStroke" value="1" checked>
+							Có 
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="prevalentStroke" value="0" checked>
+							Không 
+						</label>
+					</div>
+				</td>
+
+				<td>
+					Có tiền sử bệnh tăng huyết áp không?:  
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="prevalentHyp" value="1" checked>
+							Có 
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="prevalentHyp" value="0" checked>
+							Không 
+						</label>
+					</div>
+				</td>
+				<td>
+					Có bị bệnh tiểu đường không?:  
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="diabetes" value="1" checked>
+							Có 
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="diabetes" value="0" checked>
+							Không 
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td colspan="2"><button type="submit">Lưu</button></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+		</table>
+	</form>
+
+	<!-- validation-->
+    <script src="/functions/validation.js"></script>
+    <script>
+        validation({
+            form: "#form-1",
+            selectorParent: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                validation.isRequired('#emailAdd', 'Vui lòng nhập thông tin vào trường này'),
+                validation.isEmail('#emailAdd', "Vui lòng nhập đúng định dạng Email"),
+
+                validation.isRequired('#passAdd', 'Vui lòng nhập thông tin vào trường này'),
+                validation.isPassLength('#passAdd', 6, "Mật khẩu phải có độ dài tối thiểu là 6 ký tự"),
+
+                validation.isRequired('#age', 'Vui lòng nhập tuổi của bạn'),
+                validation.isRequired('#weight', 'Vui lòng nhập cân nặng của bạn(kg)'),
+                validation.isRequired('#height', 'Vui lòng nhập chiểu cao của bạn(m)'),
+                validation.isRequired('#cigsPerDay', 'Vui lòng nhập số điếu thuốc trên một ngày')
+            ],
+        });
+    </script>
+
+</body>

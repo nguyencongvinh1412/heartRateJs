@@ -1,0 +1,86 @@
+input {
+  outline: none;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-family: inherit;
+  font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none; 
+}
+input[type=search] {
+  background: #C0ECF0 url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+  border: solid 1px #fff;
+  padding: 9px 10px 9px 32px;
+  width: 55px;
+  float: right;
+  margin-right: 70px;
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+  
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+input[type=search] {
+  width: 15px;
+  padding-left: 10px;
+  color: transparent;
+  cursor: pointer;
+}
+input[type=search]:hover {
+  background-color: #fff;
+}
+input[type=search]:focus {
+  width: 130px;
+  padding-left: 32px;
+  color: #000;
+  background-color: #fff;
+  cursor: auto;
+}
+input:-moz-placeholder {
+  color: transparent;
+}
+input::-webkit-input-placeholder {
+  color: transparent;
+}
+/*==Reset CSS==*/
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+/*==Style cơ bản cho website==*/
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+/*==Style cho menu===*/
+#menu ul {
+  background: #C0ECF0  ;
+  list-style-type: none;
+  text-align: center;
+}
+#menu li {
+  left:0;
+  color: #C0ECF0;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  color: #009999;
+  display: block;
+}
+#menu a:hover {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #333;
+}

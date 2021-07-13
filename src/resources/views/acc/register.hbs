@@ -1,0 +1,211 @@
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <header>
+        <h3>
+            ĐĂNG KÝ/ ĐĂNG NHẬP
+        </h3>
+    </header>
+    <main>
+        <table  align="center" style="margin:auto;">
+            <tr>
+                <td width="800px">
+                    <div class="signup-form">
+                        <form action="/acc/register" method="post" id="form-1">
+                            <h1>Đăng ký</h1>
+                            <div class="input-box form-group">
+                                <i></i>
+                                <input type="email" placeholder="Nhập Email" name="name" value="" id="emailRegister" required="">
+                                <span class="form-message"></span>
+                            </div>
+
+                            <div class="input-box form-group">
+                                <i></i>
+                                <input type="password" placeholder="Nhập mật khẩu" name="pass" value="" id="passRegister" required="">
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <div class="input-box form-group">
+                                <i></i>
+                                <input type="password" placeholder="Nhập lại mật khẩu" value="" id="passAgain" required="">
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <div class="form-check form-group">
+                                <input type="radio" id="male" name="sex" value="1" checked>
+                                <label for="male">Nam</label>  
+                                <input type="radio" name="sex" id="female" value="0">
+                                <label for="female"> Nữ</label>
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <br>
+                            <div class="input-box form-group">
+                                <i></i>
+                                <input type="text" placeholder="Nhập tuổi" name="age" value="" id="age" required="">
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <div class="input-box form-group">
+                                <i></i>
+                                <input type="text" placeholder="Nhập cân năng (Kg)" name="weight" value="" id="weight" required="">
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <div class="input-box form-group">
+                                <i></i>
+                                <input type="text" placeholder="Nhập chiều cao (m)" name="height" value="" id="height" required="">
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <label>Bạn có hút thuốc không?</label>
+                            <div class="form-check form-group">
+                                <input type="radio" id="currentSmoker-yes" name="currentSmoker" value="1">
+                                <label for="currentSmoker-yes">Có</label>
+                                <input type="radio" id="currentSmoker-no" name="currentSmoker" value="0" checked>
+                                <label for="currentSmoker-no">Không</label> 
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <br>
+                            <div class="input-box form-group">
+                                <i></i>
+                                <input type="text" placeholder="Số điếu thuốc/ngày" name="cigsPerDay" value="" id="cigsPerDay" required="">
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <label>Bạn có đang dùng thuốc tăng huyết áp không?</label>
+                            <div class="form-check form-group">
+                                <input type="radio" id="BPMeds-yes" name="BPMeds" value="1">
+                                <label for="BPMeds-yes">Có</label>
+                                <input type="radio" id="BPMeds-no" name="BPMeds" value="0" checked>
+                                <label for="BPMeds-no">Không</label>
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <br>
+                            <label>Bạn có từng bị bệnh đột quỵ không?</label>
+                            <div class="form-check form-group">
+                                <input type="radio" id="prevanlentStroke-yes" name="prevalentStroke" value="1">
+                                <label for="prevanlentStroke-yes">Có</label>
+                                <input type="radio" id="prevanlentStroke-no" name="prevalentStroke" value="0" checked> 
+                                <label for="prevanlentStroke-no">Không</label>
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <br>
+                            <label>Bạn có từng bị bệnh tăng huyết áp không?</label>
+                            <div class="form-check form-group">
+                                <input type="radio" id="prevalentHyp-yes" name="prevalentHyp" value="1">
+                                <label for="prevalentHyp-yes">Có</label>
+                                <input type="radio" id="prevalentHyp-no" name="prevalentHyp" value="0" checked> 
+                                <label for="prevalentHyp-no">Không</label>
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <br>
+                            <label>Bạn có bị bệnh tiểu đường không?</label>
+                            <div class="form-check form-group">
+                                <input type="radio" id="diabetes-yes" name="diabetes" value="1">
+                                <label for="diabetes-yes">Có</label>
+                                <input type="radio" name="diabetes" id="diabetes-no" value="0" checked>
+                                <label for="diabetes-no">Không</label>
+                                <span class="form-message"></span>
+                            </div>
+                            
+                            <br>
+                            <div class="btn-box-dk">
+                                <button type="submit">
+                                    Đăng ký
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </main>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h4>DAVDK<span>group</span></h4>
+
+            <p class="footer-links">
+                <a href="#" class="link-1">Trang chủ</a>
+
+                <a href="#">Chúng tôi</a>
+
+                <a href="#">Liên hệ</a>
+            </p>
+
+            <p class="footer-company-name">DAVDK © 2021</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Đại học Bách Khoa Đà Nẵng</span> Liên Chiểu, Đà Nẵng</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+8423345779</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">duyduonglee81@gmail.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>Về Chúng tôi</span>
+                DAVĐK luôn đồng hành cùng các bạn, nơi của trách nhiệm và chất lượng!
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="/functions/validation.js"></script>
+
+    <script>
+        validation({
+            form: "#form-1",
+            selectorParent: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                validation.isRequired('#emailRegister', 'Vui lòng nhập thông tin vào trường này'),
+                validation.isEmail('#emailRegister', "Vui lòng nhập đúng định dạng Email"),
+
+                validation.isRequired('#passRegister', 'Vui lòng nhập thông tin vào trường này'),
+                validation.isPassLength('#passRegister', 6, "Mật khẩu phải có độ dài tối thiểu là 6 ký tự"),
+                validation.isConfirmPass('#passAgain', function () {
+                    var element = document.querySelector('#form-1 #passRegister');
+                    return element.value;
+                }, 'Vui lòng nhập mật khẩu chính xác'),
+
+                validation.isRequired('#age', 'Vui lòng nhập tuổi của bạn'),
+                validation.isRequired('#weight', 'Vui lòng nhập cân nặng của bạn(kg)'),
+                validation.isRequired('#height', 'Vui lòng nhập chiểu cao của bạn(m)'),
+                validation.isRequired('#cigsPerDay', 'Vui lòng nhập số điếu thuốc trên một ngày')
+            ],
+        });
+    </script>
+</body>

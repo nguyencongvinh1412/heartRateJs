@@ -1,0 +1,243 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Chi tiết</title>
+	<!-- Load main stylesheet -->
+	<link rel="stylesheet" href="/css/capnhat.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <style>
+        .btn {
+            width: 100%;
+            margin-top: 20px;
+            border: none;
+            background: #1abc9c;
+            cursor: pointer;
+            border-radius: 3px;
+            padding: 6px;
+            width: 200px;
+            color: white;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+	<form action="" method="post" id="form-repair">
+		<table>
+            <tr>
+                <td>
+                    Code:
+                </td>
+                <td>
+                    <input type="text" value="{{user.code}}" readonly name="code">
+                </td>
+            </tr>
+
+        <tr>
+				<td>
+					Email:
+				</td>
+				<td class="form-group">
+					<input type="text" required="" name="emailUpdate" id="emailUpdate" value="{{user.name}}">
+					<span class="form-message"></span>
+				</td>
+				<td>
+					Password:
+				</td>
+				<td class="form-group">
+					<input type="text" required="" name="passUpdate" id="passUpdate" value="{{user.pass}}">
+					<span class="form-message"></span>
+				</td>
+				<td>
+					Giới tính:
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+                            <input type="radio" id="male" class="form-check-input" name="sex" value="1"
+                                {{checkValueBox user.sex 1}}
+                            >
+						Nam 
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+                            <input type="radio" id="female" class="form-check-input" name="sex" value="0"
+                                {{checkValueBox user.sex 0}}
+                            >
+						Nữ
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Tuổi:
+				</td>
+				<td class="form-group">
+					<input type="text" required="" name="age" id="age" value="{{user.age}}">
+					<span class="form-message"></span>
+				</td>
+				<td>
+					Chiều cao:
+				</td>
+				<td class="form-group">
+					<input type="text" required="" name="height" id="height" value="{{user.height}}">
+					<span class="form-message"></span>
+				</td>
+				<td>
+					Cân nặng:
+				</td>
+				<td class="form-group">
+					<input type="text" required="" name="weight" id="weight" value="{{user.weight}}">
+					<span class="form-message"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Hút thuốc:  
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" id="currentSmoker" class="form-check-input" name="currentSmoker" value="1"
+                            {{checkValueBox user.currentSmoker 1}}
+                        >
+							Có 
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="currentSmoker" value="0"
+                            {{checkValueBox user.currentSmoker 0}}
+                        >
+							Không
+						</label>
+					</div>
+				</td>
+				<td>
+					Số điếu/Ngày:
+				</td>
+				<td class="form-group">
+					<input type="text" required="" name="cigsPerDay" id="cigsPerDay" value="{{user.cigsPerDay}}">
+					<span class="form-message"></span>
+				</td>
+
+				<td>
+					Có dùng thuốc tăng huyết áp không?:  
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" id="BPMeds" class="form-check-input" name="BPMeds" value="1"
+                            {{checkValueBox user.BPMeds 0}}
+                        >
+							Có 
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="BPMeds" value="0"
+                            {{checkValueBox user.BPMeds 1}}
+                        >
+							Không 
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Có tiền sử bệnh đột quỵ Không?:  
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" id="prevalentStroke" class="form-check-input" name="prevalentStroke" value="1"
+                            {{checkValueBox user.prevalentStroke 0}}
+                        >
+							Có 
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="prevalentStroke" value="0"
+                            {{checkValueBox user.prevalentStroke 1}}
+                        >
+							Không 
+						</label>
+					</div>
+				</td>
+
+				<td>
+					Có tiền sử bệnh tăng huyết áp không?:  
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" id="prevalentHyp" class="form-check-input" name="prevalentHyp" value="1"
+                            {{checkValueBox user.prevalentHyp 1}}
+                        >
+							Có 
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="prevalentHyp" value="0"
+                            {{checkValueBox user.prevalentHyp 0}}
+                        >
+							Không 
+						</label>
+					</div>
+				</td>
+				<td>
+					Có bị bệnh tiểu đường không?:  
+				</td>
+				<td>
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" id="diabetes" class="form-check-input" name="diabetes" value="1"
+                            {{checkValueBox user.diabetes 1}}
+                        >
+							Có 
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="diabetes" value="0"
+                            {{checkValueBox user.diabetes 0}}
+                        >
+							Không 
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5" align="center">
+                    <button type="submit" id="btn-repair">Cập Nhật</button>
+				</td>
+			</tr>
+		</table>     
+	</form>
+</body>
+
+<script>
+	const formRepair = document.getElementById('form-repair');
+	const btnRepair = document.getElementById('btn-repair');
+
+	// catch click action of the btn repair
+	btnRepair.addEventListener('click', function(event) {
+		formRepair.action = '/user/repairUser';
+		formRepair.submit();
+	})
+</script>

@@ -1,0 +1,30 @@
+
+<head>
+	<meta charset="UTF-8">
+	<title>Chi tiết</title>
+	<!-- Load main stylesheet -->
+	<link rel="stylesheet" href="/css/capnhat.css">
+</head>
+
+<body>
+	<form>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Level</th>
+					<th>Email</th>
+					<th>Code</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each users}}
+					<tr>
+						<td>{{this.level}}</td>
+						<td>{{this.name}}</td>
+						<td><a href="/admin/detail/{{this._id}}">{{this.code}}</a></td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</form>
+</body>
