@@ -1,8 +1,10 @@
 const path = require('path')
 const express = require('express');
 const app = express();
-const handlebars  = require('express-handlebars');
+const handlebars = require('express-handlebars');
 const cookieParser = require('cookie-parser');
+const dotenv = require('dotenv');
+dotenv.config();
 
 // helpers 
 const helperCustom = require('./helpers/helper');
@@ -45,11 +47,12 @@ app.set('views', path.join(__dirname, 'resources', 'views'))
 app.use(express.static(path.join(__dirname, 'public')));
 
 // set routes
-app.use('/',routeHome);
+app.use('/', routeHome);
 app.use('/acc', routeAcc);
-app.use('/admin',auth.authenticate, routeAdmin);
-app.use('/user',auth.authenticate, routeUser);
+app.use('/admin', auth.authenticate, routeAdmin);
+app.use('/user', auth.authenticate, routeUser);
 app.use('/server', server);
+
 
 app.listen(port, (req, res) => {
     console.log(`listening http://localhost:${port}`);

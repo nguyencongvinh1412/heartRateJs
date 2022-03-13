@@ -13,7 +13,5 @@ module.exports.prediction = (dataTrain , dataTest, heart) => {
 
     var prediction = model.predict([matrixTest])
 
-    prediction = matrixTest[8] > 100 ? 1 : 0 ;
-
     return prediction;
 }
